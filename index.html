@@ -129,7 +129,7 @@
 .candidate-header>img {
     border-radius: 50%;
     max-height: 150px;
-    max-width: 150px;
+    max-width: 150px;min-width: 147px;
     float: left;
     padding: 5px;
     border: 1.7px solid;
@@ -172,7 +172,7 @@
 }
 
 .candidate{
-    margin-top: 40px;margin-bottom: 130px;
+    margin-top: 40px;margin-bottom: 290px;
 }
 .candidate-desc {
     text-align: left;
@@ -180,16 +180,34 @@
     padding-left: 20px;font-size: large;
 }
 
+p.is
+{
+    /* float: left; */
+    text-align: left;
+    /* padding-left: 20px; */
+    margin: 0px;
+    /* margin-top: -25px; */
+    /* margin-left: 13.6%; */
+    text-align: right;
+    font-weight: 600;
+    display: none;
+    color: #538aec;
+}
 
+p.is.incumbent{
+    display: block;
+}
+p.is.not.incumbent{
+    display: none;
+}
 
-
-
-@media (min-width: 440px){
+@media (min-width: 470px){
      .candidate-header> h4 {
             margin-left: 55%;
         }
-
+    
 }
+
 @media (min-width: 768px){
      .candidate-header> h4 {
             margin-left: 52%;
@@ -197,6 +215,7 @@
         .candidate-desc {
    font-size:x-large;
 }
+ 
 
 
 }
@@ -204,6 +223,7 @@
      .candidate-header> h4 {
             margin-left: 39%;
         }
+            
 
 }
 @media (min-width: 1210px){
@@ -1013,7 +1033,7 @@
     <div class="candidate-header">
 
     <img src="https://www.congress.gov/img/member/114_rp_ca_1_lamalfa_doug.jpg" ><hr class="repub" >
-    <h4>&nbsp;&nbsp;Doug La Malfa <br> <small>CA - 01</small></h4></div>
+    <h4>&nbsp;&nbsp;Doug La Malfa <br> <small>CA - 01</small><p class="is incumbent"><small><small><b><i>Incumbent</i></b></small></small></p></h4></div>
 
     <div class="candidate-desc" style="">
         <label><small>NRA Money :<b> $400</b></small></label><br>
@@ -1040,7 +1060,9 @@
 
     <img src="
 https://static1.squarespace.com/static/5a4450c34c326d04764a4e9f/t/5a59dbb2f9619a6735a7cbe0/1515476855006/audreydenney" ><hr class="dem">
-    <h4>&nbsp;&nbsp;Audrey Denny <br> <small>CA - 01</small></h4></div>
+    <h4>&nbsp;&nbsp;Audrey Denny <br> <small>CA - 01</small>
+<p class="is not incumbent"><small><small><b><i>Incumbent</i></b></small></small></p>
+    </h4></div>
 
     <div class="candidate-desc" style="">
         <label><small>NRA Money :<b> $400</b></small></label><br>
@@ -1067,7 +1089,9 @@ https://static1.squarespace.com/static/5a4450c34c326d04764a4e9f/t/5a59dbb2f9619a
 
     <img src="
 https://www.congress.gov/img/member/114_rp_ca_2_huffman_jared.jpg"><hr class="dem">
-    <h4>&nbsp;&nbsp;Jared Hoffman <br> <small>CA - 02</small></h4></div>
+    <h4>&nbsp;&nbsp;Jared Hoffman <br> <small>CA - 02</small>
+<p class="is incumbent"><small><small><b><i>Incumbent</i></b></small></small></p>
+    </h4></div>
 
     <div class="candidate-desc" style="">
         <label><small>NRA Money :<b> $400</b></small></label><br>
@@ -1100,7 +1124,9 @@ https://www.congress.gov/img/member/114_rp_ca_2_huffman_jared.jpg"><hr class="de
 
     <img src="
 https://nebula.wsimg.com/4fccbbe2d5e952ef2861a57622ce3af7?AccessKeyId=C7727A88FC00EDCF9DE2&disposition=0&alloworigin=1" ><hr class="repub">
-    <h4>&nbsp;&nbsp;Dale Mensing <br> <small>CA - 02</small></h4></div>
+    <h4>&nbsp;&nbsp;Dale Mensing <br> <small>CA - 02</small>
+<p class="is not incumbent"><small><small><b><i>Incumbent</i></b></small></small></p>
+    </h4></div>
 
     <div class="candidate-desc" style="">
         <label><small>NRA Money :<b> $400</b></small></label><br>
@@ -1131,7 +1157,9 @@ https://nebula.wsimg.com/4fccbbe2d5e952ef2861a57622ce3af7?AccessKeyId=C7727A88FC
 
     <img src="
 https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/John_Garamendi_113th_Congress.jpg/220px-John_Garamendi_113th_Congress.jpg"><hr class="dem">
-    <h4>&nbsp;&nbsp;John Garamendi <br> <small>CA - 03</small></h4></div>
+    <h4>&nbsp;&nbsp;John Garamendi <br> <small>CA - 03</small>
+<p class="is incumbent"><small><small><b><i>Incumbent</i></b></small></small></p>
+    </h4></div>
 
     <div class="candidate-desc" style="">
         <label><small>NRA Money :<b> $400</b></small></label><br>
@@ -1163,7 +1191,9 @@ https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/John_Garamendi_113th_C
 
     <img src="
 http://williamspioneer.com/wp-content/uploads/2012/02/CharlieSchaupp3CDCongressColor1.jpg"><hr class="repub">
-    <h4>&nbsp;&nbsp;Charlie Schaupp <br> <small>CA - 03</small></h4></div>
+    <h4>&nbsp;&nbsp;Charlie Schaupp <br> <small>CA - 03</small>
+<p class="is not incumbent"><small><small><b><i>Incumbent</i></b></small></small></p>
+    </h4></div>
 
     <div class="candidate-desc" style="">
         <label><small>NRA Money :<b> $400</b></small></label><br>
@@ -1197,8 +1227,10 @@ http://williamspioneer.com/wp-content/uploads/2012/02/CharlieSchaupp3CDCongressC
     <div class="candidate-header">
 
     <img src="
-https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW2huyhNLYikE2LI2FhuDxWxhLTOD1LxmF8hOtcbg7E7aU9A"><hr class="repub">
-    <h4>&nbsp;&nbsp;Tom McClintock <br> <small>CA - 04</small></h4></div>
+https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Tom_McClintock%2C_Official_Portrait.JPG/220px-Tom_McClintock%2C_Official_Portrait.JPG"><hr class="repub">
+    <h4>&nbsp;&nbsp;Tom McClintock <br> <small>CA - 04</small>
+<p class="is incumbent"><small><small><b><i>Incumbent</i></b></small></small></p>
+    </h4></div>
 
     <div class="candidate-desc" style="">
         <label><small>NRA Money :<b> $400</b></small></label><br>
@@ -1231,7 +1263,9 @@ https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW2huyhNLYikE2LI2FhuDxWxhL
 
     <img src="
 http://www.thepresstribune.com/sites/default/files/styles/photo_gallery_big/public/morse.jpg?itok=Wv0Gifvk" ><hr class="dem">
-    <h4>&nbsp;&nbsp;Jessica Morse <br> <small>CA - 04</small></h4></div>
+    <h4>&nbsp;&nbsp;Jessica Morse <br> <small>CA - 04</small>
+<p class="is not incumbent"><small><small><b><i>Incumbent</i></b></small></small></p>
+    </h4></div>
 
     <div class="candidate-desc" style="">
         <label><small>NRA Money :<b> $400</b></small></label><br>
@@ -1272,7 +1306,8 @@ http://www.thepresstribune.com/sites/default/files/styles/photo_gallery_big/publ
 
     <img src="
 https://www.congress.gov/img/member/114_rp_ca_5_thompson_mike.jpg" ><hr class="dem">
-    <h4>&nbsp;&nbsp;Mike Thompson <br> <small>CA - 05</small></h4></div>
+    <h4>&nbsp;&nbsp;Mike Thompson <br> <small>CA - 05</small>
+    <p class="is incumbent"><small><small><b><i>Incumbent</i></b></small></small></p></h4></div>
 
     <div class="candidate-desc" style="">
         <label><small>NRA Money :<b> $400</b></small></label><br>
@@ -1309,7 +1344,9 @@ https://www.congress.gov/img/member/114_rp_ca_5_thompson_mike.jpg" ><hr class="d
 
     <img src="
 http://style.anu.edu.au/_anu/4/images/placeholders/person.png"><hr class="">
-    <h4>&nbsp;&nbsp;Anthony Mills<br> <small>CA - 05</small></h4></div>
+    <h4>&nbsp;&nbsp;Anthony Mills<br> <small>CA - 05</small>
+<p class="is not incumbent"><small><small><b><i>Incumbent</i></b></small></small></p>
+    </h4></div>
 
     <div class="candidate-desc" style="">
         <label><small>NRA Money :<b> $400</b></small></label><br>
@@ -1327,6 +1364,85 @@ http://style.anu.edu.au/_anu/4/images/placeholders/person.png"><hr class="">
 
 
 <!-- candidate  info finishes here -->
+
+
+
+
+
+
+
+
+
+<!--candidate info starts here -->
+<div class="candidate" >
+
+
+    <div class="candidate-header">
+
+    <img src="
+http://style.anu.edu.au/_anu/4/images/placeholders/person.png"><hr class="">
+    <h4>&nbsp;&nbsp;Anthony Mills<br> <small>CA - 05</small>
+<p class="is not incumbent"><small><small><b><i>Incumbent</i></b></small></small></p>
+    </h4></div>
+
+    <div class="candidate-desc" style="">
+        <label><small>NRA Money :<b> $400</b></small></label><br>
+        <label><small>Confirmed to vote on HR4240 : </small></label>
+        <br>
+<ul class="soc-c" style="padding-left: 0px">
+                        <li> <a target="_blank" href="https://350nyc.org"><span class="fa fa-globe"></span></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/350NYC/"><span class="fa fa-facebook"></span></a></li>
+                        <li><a target="_blank" href="https://www.twitter.com/350nyc"><span class="fa fa-twitter"></span></a></li>
+                       
+                    </ul>
+
+    </div>
+</div>
+
+
+<!-- candidate  info finishes here -->
+
+
+
+<!--candidate info starts here -->
+<div class="candidate" >
+
+
+    <div class="candidate-header">
+
+    <img src="
+http://style.anu.edu.au/_anu/4/images/placeholders/person.png"><hr class="">
+    <h4>&nbsp;&nbsp;Jrmar Mills<br> <small>CA - 05</small>
+<p class="is not incumbent"><small><small><b><i>Incumbent</i></b></small></small></p>
+    </h4></div>
+
+    <div class="candidate-desc" style="">
+        <label><small>NRA Money :<b> $400</b></small></label><br>
+        <label><small>Confirmed to vote on HR4240 : </small></label>
+        <br>
+<ul class="soc-c" style="padding-left: 0px">
+                        <li> <a target="_blank" href="https://350nyc.org"><span class="fa fa-globe"></span></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/350NYC/"><span class="fa fa-facebook"></span></a></li>
+                        <li><a target="_blank" href="https://www.twitter.com/350nyc"><span class="fa fa-twitter"></span></a></li>
+                       
+                    </ul>
+
+    </div>
+</div>
+
+
+<!-- candidate  info finishes here -->
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8100,6 +8216,18 @@ http://style.anu.edu.au/_anu/4/images/placeholders/person.png"><hr class="">
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
     <script src="js/velocity.min.js"></script>
+    <script src="js/papaparse.min.js"></script>
+    <script type="text/javascript">
+        Papa.parse("https://docs.google.com/spreadsheets/d/18l_7MPHoDdl7lRtp9uBtpNg_N6DyRrSrfvz-jY6Fr9g/export?format=csv&id=18l_7MPHoDdl7lRtp9uBtpNg_N6DyRrSrfvz-jY6Fr9g&gid=1512628366", {
+    download: true,
+    step: function(row) {
+        console.log("Row:"+ row.data);
+    },
+    complete: function() {
+        console.log("All done!");
+    }
+});
+    </script>
 </body>
 
 </html>
