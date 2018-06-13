@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Voter Guide</title>
+    <title>Gun Safety Voter Reference</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
@@ -39,7 +39,7 @@
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"],[class^="response-"], [class*="response-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -54,26 +54,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-or:before {
+.icon-or:before ,.response-confirmed:before {
   content: "\e900";
   color: #ffa500;
 }
 
-.icon-support:before {
+.icon-support:before,.response-supports:before {
   content: "✓";
   color: #777777;
 }
-.icon-noposition:before
+.icon-noposition:before,.response-noposition:before 
 {
     content: "----";
     color:#777777;
 }
-.icon-notsupportive:before
+.icon-notsupportive:before,.response-mildlyopposed:before 
 {
     content: "✖";
     color:#777777;
 }
-.icon-vo:before
+.icon-vo:before,.response-firmlyopposed:before 
 {
     content: "✖";
     color:red;
@@ -166,14 +166,17 @@
     margin-left: 57px;
    border-color: grey;
 }
+ #glossary hr.noparty{
+    border-color: grey;
+ }
 
-.candidate-header > hr.dem{
+.candidate-header > hr.dem, #glossary hr.dem{
     border-color: #0909bd;
 }
-.candidate-header > hr.repub{
+.candidate-header > hr.repub,#glossary hr.repub{
    border-color: #ff4804;
 }
-.candidate-header >hr.green{
+.candidate-header >hr.green ,#glossary hr.green{
     border-color: #8bc34a;
 }
 .candidate-header> h4 {
@@ -222,9 +225,14 @@ p.is.incumbent{
 p.is.not.incumbent{
     display: none;
 }
-.candidates-subgroup.senate{
+/* TEMP */
+.candidates-subgroup.senate,.candidates-subgroup.house{
     display: none;
 }
+#california-house-candidates{
+    display: block;
+}
+/*TEMP*/
 @media (min-width: 470px){
      .candidate-header> h4 {
             margin-left: 55%;
@@ -346,6 +354,8 @@ p.is.not.incumbent{
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
+                                     <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="#glossary-loc">Glossary - Click on this if you are here for the 1st time !</a> </li>
+
                      <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="#alabama">Alabama</a> </li>
                       <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="#alaska">Alaska</a> </li>
                       <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="#arizona">Arizona</a> </li>
@@ -404,19 +414,55 @@ p.is.not.incumbent{
             </div>
         </div>
     </nav>
-    <header class="masthead text-center text-white d-flex" style="background: orange">
+    <style type="text/css">
+        
+          div#glossary {
+    background: white;
+    color: black;
+    padding: 38px;
+    /* position: absolute; */
+    width: 90%;
+    border-radius: 19px;
+    z-index: 50;
+    margin-top: -19px;
+}
+
+div#glossary td>hr {
+    display: inline-block;
+    min-width: 100px;
+    margin-left: 7px;
+    max-width: 100px;
+}
+
+div#glossary {}
+
+.gcontent>hr {
+    max-width: 260px;
+}
+
+.gcontent>span {/* position: absolute; */}
+
+table {
+    width: 90%;
+}
+
+td>span {
+    font-size: x-large;
+}
+
+#glossary td {
+    text-align: center;
+}
+    </style>
+    <header class="masthead text-center text-white d-flex" style="background: orange" class="mainheader">
 
         <div class="container my-auto">
-        <div class="row" style="text-align: right;float: right;    margin-top: -60px;
-    margin-right: -70px;">
-            <div style="cursor:pointer;float: right;font-size: x-large;padding: 5px;padding-top:0px;padding-bottom:0px;border-radius: 50%;border:1px solid">
-             <big><big> 👁</big></big>
-            </div>
-        </div>
-            <div class="row">
+      
+            
+<div class="row" id="intro">
                 <div class="col-lg-10 mx-auto">
                     <h1 class="text-uppercase">
-              <strong>The Gun Safety <br>Voter Reference List</strong>
+              <strong>The Gun Safety <br>Voter Reference </strong>
             </h1>
                     <hr>
                 </div>
@@ -426,10 +472,12 @@ p.is.not.incumbent{
                   
                 </div>
             </div>
-            <div class="row" id="stats">
-            </div>
+           <!--  <div  id="stats">
+               <h3>38% Candidates as of now have commited to vote for Federal Background checks</h3>
+            </div> -->
         </div>
     </header>
+
     <style type="text/css">
     tr {
         padding: 9px;
@@ -457,12 +505,14 @@ p.is.not.incumbent{
         border-bottom: 1px solid gainsboro;
     }
 
-    td:first-child,
-    th:first-child {
+    td {
 
         border-right: 1px solid gainsboro;
     }
+td:last-child {
 
+        border-right: none;
+    }
     .signed {
         font-size: large;
         font-weight: 600;
@@ -501,12 +551,162 @@ p.is.not.incumbent{
 
 
 
+
+
+
+
+
+
+<section id="glossary-loc">
+    <div class="row" id="glossary">
+                <div class="col-lg-10 mx-auto">
+                    <h1 class="text-uppercase" style="text-align: center;">
+              <strong>Glossary</strong>
+            </h1>
+    
+                    <hr><center><h2 style="
+    margin: 26px;
+">Party</h2>
+<table>
+  <tbody><tr>
+    <td><hr class="repub"></td><td>Republican</td>
+    
+  </tr>
+  <tr>
+    <td><hr class="dem"></td><td>Democratic</td>
+    
+  </tr>
+  <tr>
+    <td><hr class="green"></td><td>Green</td>
+    
+  </tr>
+    <tr>
+    <td><hr class="noparty"></td><td>No Party/Other</td>
+    
+  </tr>
+    </tbody></table>
+<br><br><br>
+
+<h2 style="
+    margin: 26px;
+">Positions</h2>
+<table>
+  <tbody><tr>
+      <td><span class="icon-or"></span></td>
+    <td>Is on record confirmed to consponsor(or already cosponsored) and voting yes for the legislation </td>
+  </tr>
+  <tr>
+      <td><span class="icon-support" style="
+    font-size: x-large;
+"></span></td>
+    <td>Has shown some kind of support but hasnt confirmed</td>
+  </tr>
+  <tr>
+      <td><span class="response icon-noposition"></span></td>
+    <td>Is Neutral or hasn't taken a stance as of yet</td>
+  </tr>
+    <tr>
+        <td><span class="icon-notsupportive"></span></td>
+    <td>Has indicated some opposition but can concede</td>
+  </tr>
+      <tr>
+        <td><span class="icon-vo"></span></td>
+    <td>Is on record firmly in opposition</td>
+  </tr>
+      
+    </tbody></table>
+
+<br><br><br>
+<h2 style="
+    margin: 26px;
+">Bills</h2>
+<table>
+  <tbody><tr>
+      <td><a target="_blank" href="https://www.congress.gov/bill/115th-congress/house-bill/4240/text">HR4240</a></td>
+      <td>House</td>
+    <td> <b>Public Safety and Second Amendment Rights Protection Act of 2017</b>(Universal Background Checks) </td>
+  </tr>
+  <tr>
+      <td><a target="_blank" href="https://www.congress.gov/bill/115th-congress/house-bill/5163/text">H.R.5163 - Coming Soon! </a></td><td>House</td>
+    <td> <b>Keeping Guns from High-Risk Individuals Act</b><br> (People convicted of violent crimes and or stalking will not get access to firearms)</td>
+  </tr>
+  <tr>
+      <td><a target="_blank" href="https://www.congress.gov/bill/115th-congress/house-bill/5383/text" >H.R.5383 - Coming Soon! </a></td><td>House</td>
+    <td>
+ <b>Ammunition Background Check Act of 2018</b></td>
+  </tr>
+    
+    </tbody></table>
+    </center>
+    
+  
+                </div>
+                <div class="col-lg-8 mx-auto">
+                    <div class="mb-5" style="color:rgba(0,0,0,0.8);padding: 5px;border-radius: 6px;font-weight: 700;font-size: x-large;"><br></div>
+                  
+                  
+                </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section id="alabama">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Alabama  <div ></div></h2>
                     <br>
+
+
+
+<div class="all-candidates">
+
+
+<div class="candidates-subgroup senate" id="alabama-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="alabama-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div>
 
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
@@ -633,6 +833,22 @@ p.is.not.incumbent{
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Alaska  <div ></div></h2>
                     <br>
 
+<div class="all-candidates">
+
+
+<div class="candidates-subgroup senate" id="alaska-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="alaska-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -769,6 +985,22 @@ p.is.not.incumbent{
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Arizona  <div ></div></h2>
                     <br>
 
+<div class="all-candidates">
+
+
+<div class="candidates-subgroup senate" id="arizona-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="arizona-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -918,6 +1150,23 @@ p.is.not.incumbent{
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Arkansas <div ></div></h2>
                     <br>
 
+<div class="all-candidates">
+
+
+<div class="candidates-subgroup senate" id="arkansas-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="arkansas-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div>
+</div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -1270,7 +1519,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Colorado <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="colorado-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="colorado-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -1407,6 +1671,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Conneticut <div ></div></h2>
                     <br>
+                    <div class="all-candidates">
+
+
+<div class="candidates-subgroup senate" id="connecticut-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="connecticut-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
@@ -1541,7 +1821,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Delaware<div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="delaware-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="delaware-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -1685,7 +1980,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Florida <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="florida-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="florida-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -1821,7 +2131,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Georgia <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="georgia-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="georgia-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -1973,7 +2298,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Hawaii <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="hawaii-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="hawaii-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -2100,7 +2440,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Idaho <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="idaho-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="idaho-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -2233,7 +2588,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Illinois <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="illinois-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="illinois-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -2377,7 +2747,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Indiana <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="indiana-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="indiana-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -2533,7 +2918,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Iowa <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="iowa-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="iowa-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -2671,7 +3071,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Kansas<div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="kansas-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="kansas-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -2798,7 +3213,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Kentucky <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="kentucky-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="kentucky-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -2933,7 +3363,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Louisiana <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="louisiana-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="louisiana-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -3082,7 +3527,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Maine <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="maine-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="maine-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -3212,7 +3672,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Maryland <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="maryland-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="maryland-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -3354,7 +3829,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Massachusetts<div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="massachusetts-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="massachusetts-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -3493,7 +3983,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Michigan <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="michigan-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="michigan-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -3633,7 +4138,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Minnesota <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="minnesota-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="minnesota-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -3779,7 +4299,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Mississippi <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="mississippi-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="mississippi-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -3929,7 +4464,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Missouri <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="missouri-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="missouri-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -4072,7 +4622,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Montana <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="montana-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="montana-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -4237,7 +4802,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Nebraska <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="nebraska-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="nebraska-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -4370,7 +4950,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Nevada <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="nevada-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="nevada-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -4504,7 +5099,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">New Hampshire<div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="newhampshire-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="newhampshire-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -4643,7 +5253,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">New Jersey <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="newjersey-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="newjersey-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -4778,7 +5403,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">New Mexico <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="newmexico-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="newmexico-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -4978,7 +5618,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">New York <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="newyork-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="newyork-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -5106,7 +5761,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">North Carolina<div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="northcarolina-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="northcarolina-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -5253,7 +5923,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">North Dakota <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="northdakota-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="northdakota-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -5385,7 +6070,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Ohio <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="ohio-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="ohio-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -5567,7 +6267,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Oklahoma <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="oklahoma-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="oklahoma-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -5692,7 +6407,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Oregon <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="oregon-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="oregon-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -5819,7 +6549,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Pennsylvania <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="pennsylvania-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="pennsylvania-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -5954,7 +6699,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Rhode Island<div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="rhodeisland-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="rhodeisland-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -6106,7 +6866,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">South Carolina <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="southcarolina-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="southcarolina-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -6238,7 +7013,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">South Dakota <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="southdakota-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="southdakota-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -6413,7 +7203,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Tennessee<div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="tennessee-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="tennessee-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -6556,7 +7361,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Texas <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="texas-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="texas-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -6683,7 +7503,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Utah <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="utah-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="utah-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -6833,7 +7668,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Vermont<div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="vermont-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="vermont-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -6974,7 +7824,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Virginia <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="virginia-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="virginia-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -7130,7 +7995,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Washington <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="washington-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="washington-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -7320,7 +8200,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">West Virginia <div ></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="westvirginia-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="westvirginia-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -7477,7 +8372,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Wisconsin  <div style=""></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="wisconsin-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="wisconsin-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -7604,7 +8514,22 @@ p.is.not.incumbent{
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="text-align: left;padding: 17px;">Wyoming  <div></div></h2>
                     <br>
+<div class="all-candidates">
 
+
+<div class="candidates-subgroup senate" id="wyoming-senate-candidates" >
+<h5  class="office-type" style=""><big><b>Senate</b></big></h5>
+
+
+</div>
+
+
+
+<div class="candidates-subgroup house" id="wyoming-house-candidates">
+<h5  class="office-type" style=""><big><b>House</b></big></h5>
+
+
+</div></div>
 <!-- All candidates from AL start here -->
 <!-- <div class="allcandidtates">
     <h5><b>All Candidates from Alabama</b></h5>
@@ -7818,10 +8743,6 @@ p.is.not.incumbent{
 
 
 
-
-
-
-
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -7831,17 +8752,10 @@ p.is.not.incumbent{
                 </div>
             </div>
         </div>
-        <div class="row" style="margin-bottom: 100px;margin-top:30px">
-            <div class="col-lg-4 ml-auto text-center">
-                <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-                <p>Call</p>
-            </div>
-            <div class="col-lg-4 mr-auto text-center">
-                <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
-                <p>
-                    <a href="mailto:your-email@your-domain.com">Email Us</a>
-                </p>
-            </div>
+        <div style="margin-bottom: 100px;margin-top:30px;text-align: center;">
+          Contribute to the data
+          <br>
+          Information coming soon!
         </div>
     </section>
     <footer style="min-height: 230px;
@@ -7885,7 +8799,7 @@ p.is.not.incumbent{
         function addacandidate(cname,img,district,incumbent,p,nramoney,ubc,email,phone,website,facebook,twitter)
         {
 
-            var r='<!--candidate info starts here --><div class="candidate" > <div class="candidate-header"><img src="'+img+'"><hr class="'+p+'"> <h4>&nbsp;&nbsp;'+cname+'<br> <small>'+district+'</small><p class="'+incumbent+'"><small><small><b><i>Incumbent</i></b></small></small></p> </h4></div> <div class="candidate-desc" style=""> <label><small>NRA Money :<b class="nra-money"> '+nramoney+'</b></small></label><br><label><small class="hr420">Confirmed to vote on HR4240 : </small> <span class="'+ubc+'"></span></label><br> <label><small>Email : </small><small><a href="">&nbsp;'+email+'</a></small></label><br><label><small>Phone : </small><small><a href="">&nbsp;'+phone+'</a></small></label> <br><ul class="soc-c" style="padding-left: 0px"><li> <a target="_blank" href="'+website+'"><span class="fa fa-globe"></span></a></li><li><a target="_blank" href="'+facebook+'"><span class="fa fa-facebook"></span></a></li><li><a target="_blank" href="'+twitter+'"><span class="fa fa-twitter"></span></a></li></ul> </div></div><!-- candidate  info finishes here -->';
+            var r='<!--candidate info starts here --><div class="candidate" > <div class="candidate-header"><img src="'+img+'"><hr class="'+p+'"> <h4>&nbsp;&nbsp;'+cname+'<br> <small>'+district+'</small><p class="'+incumbent+'"><small><small><b><i>Incumbent</i></b></small></small></p> </h4></div> <div class="candidate-desc" style=""> <label><small>NRA Money :<b class="nra-money"> '+nramoney+'</b></small></label><br><label><small class="hr420">Confirmed to vote on HR4240 : </small> <span class="'+ubc+'"></span></label><br> <label><small>Email : </small><small><a href="mailto:'+email+'">&nbsp;'+email+'</a></small></label><br><label><small>Phone : </small><small><a href="tel:'+phone+'">&nbsp;'+phone+'</a></small></label> <br><ul class="soc-c" style="padding-left: 0px"><li> <a target="_blank" href="'+website+'"><span class="fa fa-globe"></span></a></li><li><a target="_blank" href="'+facebook+'"><span class="fa fa-facebook"></span></a></li><li><a target="_blank" href="'+twitter+'"><span class="fa fa-twitter"></span></a></li></ul> </div></div><!-- candidate  info finishes here -->';
 
             return r;
         }
