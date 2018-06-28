@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Climate Mondays</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        overflow-x: hidden;
+    }
+    a,button,input[type="submit"]
+    {
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 600px) {
+    html {
+        overflow: hidden;
+       
+    }
+}
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Climate Mondays</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#campaign">Campaign</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#livefeed">What's Happening</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#pledges">Pledges</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#socialmedia">Social Media</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">All Data</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead text-center text-white d-flex">
+        <div class="container my-auto">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1 class="text-uppercase">
+              <strong>Make change happen</strong>
+            </h1>
+                    <hr>
+                </div>
+                <div class="col-lg-8 mx-auto">
+                    <p class="mb-5" style="background:rgba(0,0,0,0.44);padding: 5px;border-radius: 6px">Join Us from June 5 every monday till the election to make sure that the people elected to office put us and our planet above polluters. </p>
+                    <p style="    font-size: 1.52em;
+    font-weight: 900;   text-shadow: 0 0 3px #454407;
+ ">The next event is on June 5th 2018</p>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#signup">Sign Up</a>
+                </div>
+            </div>
+            <div class="row" id="stats">
+            </div>
+        </div>
+    </header>
+   
+    <section id="campaign">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Get Started</h2>
+                    <hr class="my-4">
+                    <br>
+                    <p style="    font-size: 14px;
+    "><big>We are calling on our politicians to sign the pledges to <b><b>Not take fossil fuel money</b></b> and <b><b>Consponsor the Off Fossil Fuels Act</b></b> . <br>Enter your zipcode to find out where your elected officials stand .Find out more about the pledges <a href="#pledges"><strong>here</strong></a></big> </p>
+                    <br>
+                    <center>
+                        <div>
+                            <input type="text" placeholder="Enter your zipcode" name="" style="    outline: none;
+    padding: 9px;
+    letter-spacing: 0.1em;    border: 4px double gainsboro;
+    margin-top: 3px;">
+                            <br>
+                            <br>
+                            <button type="submit" onclick="findreps()" name="Go" style="
+    background: #73d243;
+    border:1px solid white;
+    border-radius:4px;
+    padding: 9px;
+    color:white;
+    min-width: 100px;outline: none;
+">Find My Reps</button>
+                        </div>
+
+
+                        <style type="text/css">
+                        .table_
+                        {
+                            padding: 9px;
+    margin: 17px;
+    color: navy;
+    text-align: center;
+    border-collapse: collapse;;margin-top: 40px;
+                        }
+                        tr {
+                            border: none;
+                        }
+
+                        tr {
+                            padding: 8px;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+                        }
+
+                        td {
+                            width: 260px;
+                            padding: 26px
+                        }
+
+                        th:nth-child(1),
+                        td:nth-child(1) {
+                            border-right: 2px solid rgba(255, 0, 0, 0.68);
+                        }
+
+                        th:nth-child(2),
+                        td:nth-child(2) {
+                            padding-left: 19px;
+                        }
+
+                        thead tr {
+                            border-bottom: 2px solid;
+                        }
+
+                        td small {
+                            /* display: none; */
+                            opacity: 0.7;
+                        }
+
+                        textarea {
+    resize: none;
+}
+.response-yes{
+        color: #74d800;
+    font-weight: 800;
+
+}
+.response-yes:before{
+    content: "Yes";
+}
+.response-no{
+        color: orangered;
+    font-weight: 800;
+
+}
+.response-no:before{
+    content: "No";
+}
+.pledgebullet:before{
+
+content:"‣";
+font-size: 36px;
+padding:8px;
+}
+ @media only screen and (max-width: 600px) {
+    .table_ ,table {
+     margin-left: 2px;
+       
+    }
+}
+                        </style>
+                        <div id="main-table">
+                         
+                       </div>
+                        <div id="all-reps" style="display: none">
+                          <h3 style="padding: 7px;
+    padding-top: 17px;
+    padding-bottom: 0px;
+    margin-top: 6%;
+    color: #2d2d2d;">Reps in </h3>
+
+
+
+
+<!-- Reps chunk starts -->
+                            <div style="margin-top: 70px;color:grey;" class="reps-in-senate"><big style="border-bottom:1px double gainsboro">Senate</big>
+                            <!--Candidate Starts -->
+                            <div style="padding: 3%;padding-top:20px;">
+                                <img src="img/ke.jpg" style="width: 200px;border: 1px solid gainsboro">
+                                    <h5 style="
+    margin-top: 3%;
+  
+">Rep. Keith Ellison(D) </h5>
+                                    <h6 style="
+    /* border-bottom: 2px solid; */
+    margin-bottom: 0px;
+">MIN-73
+</h6>
+<p class="pledgebullet" style="text-align: left;max-width: 500px;margin-top: 13px"><big>Off Act Pledge : <span class="response-yes"></span> </big></p>
+<p  class="pledgebullet" style="text-align: left;max-width: 500px"><big>No Fossil Fuel Money Pledge : <span class="response-yes"></span></big></p>
+
+                               
+
+                            </div>
+                            <!--Candidate Finishes -->
+                            </div>
+                            <!-- Reps chunk finishes-->
+
+
+    <!-- Reps chunk starts -->
+                            <div style="margin-top: 70px;color:grey;" class="reps-in-house"><big style="border-bottom:1px double gainsboro">House</big>
+
+                              <!--Candidate Starts -->
+                            <div style="padding: 3%;padding-top:20px;">
+                              
+                               <img src="img/ke.jpg" style="width: 200px;border: 1px solid gainsboro">
+                                    <h5 style="
+    margin-top: 3%;
+  
+">Rep. Keith Ellison(D) </h5>
+                                    <h6 style="
+    /* border-bottom: 2px solid; */
+    margin-bottom: 0px;
+">MIN-73
+</h6>
+<p class="pledgebullet" style="text-align: left;max-width: 500px;margin-top: 13px"><big>Off Act Pledge : <span class="response-yes"></span> </big></p>
+<p  class="pledgebullet" style="text-align: left;max-width: 500px"><big>No Fossil Fuel Money Pledge : <span class="response-yes"></span></big></p>
+
+                               
+
+                            </div> <!--Candidate Finishes -->
+                            </div>
+                            <!-- Reps chunk finishes-->
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        function findreps() {
+
+             $('#all-reps').velocity("fadeIn");
+        
+        }
+    </script>
+    <section class="p-0" id="livefeed" style="margin-bottom: 70px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-heading">What's Happening</h2>
+                    <hr class="my-4">
+<br>
+
+
+<!-- InstaWidget -->
+<a href="https://instawidget.net/v/user/climatemondays" id="link-32550491b01fead5da2ad42bb37fd1954e3a1fbff1b543895eb599a79a3806fa">@climatemondays</a>
+<script src="https://instawidget.net/js/instawidget.js?u=32550491b01fead5da2ad42bb37fd1954e3a1fbff1b543895eb599a79a3806fa&width=800px"></script>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="container-fluid p-0">
+            <div class="row no-gutters popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                 
+                </div>
+              </div>
+            </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  
+                </div>
+              </div>
+            </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  
+                </div>
+              </div>
+            </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                 
+                </div>
+              </div>
+            </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                 
+                </div>
+              </div>
+            </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                 
+                </div>
+              </div>
+            </a>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <style type="text/css">
+    #vol-sign-up {
+        display: inline-block;
+    }
+
+    #vol-sign-up input,
+    #vol-sign-up textarea {
+
+        float: right;
+    }
+    </style>
+    <section id="signup" class="bg-primary" style="color: white;display: none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Volunteer Sign Up</h2>
+                    <hr style="border-color:white" class="my-4">
+                </div>
+                <div class="col-lg-12 text-center">
+                    <form id="vol-sign-up">
+                        <label><big>First Name* : &nbsp; &nbsp; </big></label>
+                        <input type="text" placeholder="Enter your First Name" style="border:6.2px double #86e257;padding:5px;outline:none" name="">
+                        <br>
+                        <br>
+                        <br>
+                        <label><big>Last Name* : &nbsp; &nbsp; </big></label>
+                        <input type="text" placeholder="Enter your Last Name" style="border:6.2px double #86e257;padding:5px;outline:none" name="">
+                        <br>
+                        <br>
+                        <br>
+                        <label><big>Email* : &nbsp; &nbsp; </big></label>
+                        <input type="email" placeholder="Enter your Email" style="border:6.2px double #86e257;padding:5px;outline:none" name="">
+                        <br>
+                        <br>
+                        <br>
+                        <label><big>Zipcode* : &nbsp; &nbsp; </big></label>
+                        <input type="email" placeholder="Enter your Zipcode" style="border:6.2px double #86e257;padding:5px;outline:none" name="">
+                        <br>
+                        <br>
+                        <br>
+                        <label><big>Phone : &nbsp; &nbsp; </big></label>
+                        <input type="phone" placeholder="Enter your Phone" style="border:6.2px double #86e257;padding:5px;outline:none" name="">
+                        <br>
+                        <br>
+                        <br>
+                        <label><big>Twitter Handle : &nbsp; &nbsp; </big></label>
+                        <input type="text" placeholder="Enter your Twitter Handle" style="border:6.2px double #86e257;padding:5px;outline:none" name="">
+                        <br>
+                        <br>
+                        <br>
+                        <label><big>Instagram Handle : &nbsp; &nbsp; </big></label>
+                        <input type="text" placeholder="Enter your Instagram Handle" style="border:6.2px double #86e257;padding:5px;outline:none" name="">
+                        <br>
+                        <br>
+                        <br>
+                        <label><big>Comments* : &nbsp; &nbsp; </big></label>
+                        <textarea rows="4" type="text" placeholder="Why is climate change important to you . Feel free to get personal." style="border:6.2px double #86e257;padding:5px;outline:none" name=""></textarea>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <input type="submit" name="Submit" style="border:6px double white;padding:6px;min-width:160px;background: transparent;color:white;font-size:x-large;float:none">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pledges">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-heading">Pledges</h2>
+                    <hr class="my-4">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center" style="padding-top: 40px;padding-bottom: 40px">
+                    <h4 class="section-heading"><b>The No Fossil Fuel money Pledge</b></h4>
+                    <p style="text-align: left;margin-top: 17px">Dirty fossil fuel money is corrupting our political system and blocking bold action on climate change. We need leaders that reject the influence of fossil fuel money and plan for a just, climate-safe, renewable energy future for everyone, not just the few.
+                        <br>
+                        <br> <b>Taking the pledge means that a candidate’s campaign will adopt a policy to not knowingly accept any contributions over $200 from the PACs, executives, or front groups of fossil fuel companies</b> — companies whose primary business is the extraction, processing, distribution, or sale of oil, gas, or coal.</p>
+                    <a class="btn" target="_blank" href="http://nofossilfuelmoney.org/" style="padding:40px;outline: none">Find Out More</a>
+                </div>
+                <div class="col-lg-8 mx-auto text-center" style="margin-top: 100px;margin-bottom: 140px">
+                    <hr class="my-1" style="max-width: 60%;opacity: 0.4"> </div>
+                <div class="col-lg-8 mx-auto text-center" style="padding-top: 40px;padding-bottom: 40px">
+                    <h4 class="section-heading"><b>The #OFFAct Pledge</b></h4>
+                    <p style="text-align: left;margin-top: 17px">
+                        A pledge to be a leader on climate change issues and support efforts in the community to move us off fossil fuels and achieve a just transition to 100% clean, renewable energy and to oppose any project that will expand fossil fuel production, and its use or transport, and work to quickly phase out existing fossil fuel infrastructure in my jurisdiction.
+                        <br>
+                        <br>
+                        <b> Taking the pledge entails putting support behind the Off Fossil Fuels for a Better Future Act (HR 3671) </b>and pledge, if elected, that one will co-sponsor the reintroduced version of this legislation in the 116th Congress.</p>
+                    <a class="btn" target="_blank" href="https://www.offfossilfuels.org/" style="padding:40px;outline:none;">Find Out More</a>
+                </div>
+            </div>
+        </div>
+        <!--
+
+<div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Sturdy Templates</h3>
+              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Ready to Ship</h3>
+              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Up to Date</h3>
+              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Made with Love</h3>
+              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+ -->
+    </section>
+    <section id="socialmedia" class="bg-primary" style="color: white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-heading">Our Social Media</h2>
+                    <hr class="my-4" style="border-color: white">
+                </div>
+            </div>
+            <style type="text/css">
+            .quart>.col-lg-4,
+            .pad>.col-lg-4 {
+                margin-bottom: 30px;
+                margin-top: 30px;
+            }
+
+            @media (min-width: 992px) {
+                .quart>.col-lg-4 {
+                    max-width: 25%;
+                }
+            }
+            </style>
+            <div class="row quart" style="margin-bottom: 100px;margin-top:30px">
+                <div class="col-lg-4 ml-auto text-center">
+                    <i class="fa fa-facebook fa-3x mb-3 sr-contact"></i>
+                    <p><a style="color: white;text-decoration: none;" href="https://www.facebook.com/ClimateMondays/" target="_blank">Like us on Facebook</a></p>
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
+                    <i class="fa fa-twitter fa-3x mb-3 sr-contact"></i>
+                    <br>
+                    <p>
+                        Follow us on Twiiter
+                    </p>
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
+                    <i class="fa fa-instagram fa-3x mb-3 sr-contact"></i>
+                    <br>
+                    <p>
+                        Follow us on Instagram
+                    </p>
+                </div>
+                <br>
+                <div class="col-lg-4 mr-auto text-center">
+                    <i class="fa fa-youtube-square fa-3x mb-3 sr-contact"></i>
+                    <br>
+                    <p>
+                        Subscribe to our Youtube Channel
+                    </p>
+                </div>
+            </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-heading">Contact</h2>
+                    <hr class="my-4">
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 100px;margin-top:30px">
+            <div class="col-lg-4 ml-auto text-center">
+                <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+                <p>Call</p>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+                <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+                <p>
+                    <a href="mailto:your-email@your-domain.com">Email Us</a>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-heading">Organizations</h2>
+                    <hr class="my-4">
+                </div>
+            </div>
+            <style type="text/css">
+            .soc-c {
+                padding: 4px;
+                list-style: none;
+                font-size: xx-large;
+                float: left;
+            }
+
+            .soc-c li {
+                display: inline-flex;
+                margin-right: 26px;
+                padding: 18px;
+                border: 1px solid #73d243;
+                border-radius: 50%;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                margin-bottom: 26px;
+            }
+
+            @media (min-width: 992px) {
+                .soc-c {
+
+                    font-size: large;
+                }
+                .soc-c li {
+
+                    display: inline-flex;
+                    margin-right: 13px;
+                    padding: 16px;
+                    border: 1px solid #73d243;
+                    border-radius: 50%;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    margin-bottom: 26px;
+                    float: left;
+                }
+            }
+            </style>
+            <div class="pad row" style="padding-top: 17px;padding-bottom: 18px;text-align: -webkit-center">
+                <div class="col-lg-4">
+                    <a href="https://www.foodandwaterwatch.org/state/new-york" target="_blank">  <img style="width:calc(100%/1.1);margin-top:20px;margin-right: 19px;cursor: pointer;" src="img/foodandwaternyc.jpg"></a>
+                    <p style="margin-top: 27px;text-align: left"><small>Food & Water Watch champions healthy food and clean water for all. We stand up to corporations that put profits before people, and advocate for a democracy that improves people’s lives and protects our environment.</small></p>
+                    <ul style="" class="soc-c">
+                        <li> <a target="_blank" href="https://www.foodandwaterwatch.org/state/new-york"><span class="fa fa-globe"></span></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/foodandwaterwatchNY/"><span class="fa fa-facebook"></span></a></li>
+                        <li><a target="_blank" href="https://twitter.com/fwaction"><span class="fa fa-twitter"></span></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/foodandwaterwatch/"><span class="fa fa-instagram"></span></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <a href="https://350nyc.org" target="_blank"> <img style="width:calc(100%/2);margin-right: 19px;cursor: pointer;" src="img/350nyc.png"></a>
+                    <p style="margin-top: 27px;text-align: left"><small>350NYC is a local affiliate of 350.org, a global grassroots network of local groups in over 188 countries working to solve the climate crisis since 2008.<br>
+
+350NYC focuses on local campaigns in New York City and New York State as well as global climate campaigns.  We host and participate in events, meetings, rallies, art builds, and protests in coalition with allied organizations for a sustainable future for everyone.</small></p>
+                    <ul class="soc-c">
+                        <li> <a target="_blank" href="https://350nyc.org"><span class="fa fa-globe"></span></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/350NYC/"><span class="fa fa-facebook"></span></a></li>
+                        <li><a target="_blank" href="https://www.twitter.com/350nyc"><span class="fa fa-twitter"></span></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/350nyc/"><span class="fa fa-instagram"></span></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <a href="https://www.sunrisemovement.org/" target="_blank">   <img style="width:calc(100%/2);cursor: pointer;" src="img/sunrisemovementnyc.jpg"></a>
+                    <p style="margin-top: 27px;text-align: left"><small>Sunrise is a movement to stop climate change and create millions of good jobs in the process.
+We're building an army of young people to make climate change an urgent priority across America, end the corrupting influence of fossil fuel executives on our politics, and elect leaders who stand up for the health and wellbeing of all people.</small>
+                    </p>
+                    <ul class="soc-c">
+                        <li> <a target="_blank" href="https://www.sunrisemovement.org/"><span class="fa fa-globe"></span></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/sunrisemvmtnyc/"><span class="fa fa-facebook"></span></a></li>
+                        <li><a target="_blank" href="https://twitter.com/sunrisemvmtnyc"><span class="fa fa-twitter"></span></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/sunrisemvmtnyc/"><span class="fa fa-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Bootstrap core JavaScript -->
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+</body>
+
+</html>
