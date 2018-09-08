@@ -8791,6 +8791,7 @@ td:last-child {
           Information coming soon!
         </div>
     </section>
+    <button style="position: fixed;top:50px;right:50px" id="filterconfirmed">Filter</button>
     <footer style="min-height: 230px;
     padding: 30px;
     background: #fbb026;
@@ -8810,6 +8811,13 @@ td:last-child {
     <script src="js/creative.min.js"></script>
     <script src="js/velocity.min.js"></script>
     <script src="js/papaparse.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function (argument) {
+    		$('#filterconfirmed').click(function(e){
+    			$('.response-confirmed').css('display','none');
+    		});
+    	});
+    </script>
     <script type="text/javascript">
 
     var c=0;
@@ -8836,6 +8844,8 @@ td:last-child {
 
             return r;
         }
+
+
     </script>
 </body>
 
