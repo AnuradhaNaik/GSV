@@ -225,6 +225,10 @@ p.is.incumbent{
 p.is.not.incumbent{
     display: none;
 }
+
+.hidden-filter{
+display: none;
+}
 /* TEMP */
 .candidates-subgroup.senate,.candidates-subgroup.house{
     display: none;
@@ -8814,7 +8818,7 @@ td:last-child {
     <script type="text/javascript">
     	$(document).ready(function (argument) {
     		$('#filterconfirmed').click(function(e){
-    			$('.response-confirmed').css('display','none');
+    			$('.response-confirmed').toggleClass('hidden-filter');
     		});
     	});
     </script>
