@@ -2,7 +2,7 @@ Link https://anuradhanaik.github.io/GunSafetyVoterReference/
 
 # [Gun Safety Voter Reference](http://bit.ly/GunSafetyVoterReference)
 
-A single issue,non partisan all in one voter reference to see who has taken how much from NRA,Who'll vote for Background checks and more!
+A single issue,non partisan all in one voter reference for 2018 to see who has taken how much from NRA,Who'll vote for Background checks and more!
 
 ## Preview
 
